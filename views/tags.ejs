@@ -1,0 +1,23 @@
+<% include header %>
+<div class="centered-wrapper">
+    <section id="portfolio-wrapper">
+        <ul class="portfolio four-columns">
+            <% posts.forEach((tag,index)=>{ %>
+            <li data-category="branding" class="branding print">
+                <a href="images/portfolio/image1.jpg" rel="prettyPhoto[pp_gal]" title="CERVEJARIA REPUBLICA">
+                    <span class="item-on-hover"><span class="hover-image"></span></span>
+                    <img src="images/portfolio/image1-small.jpg" alt=" " />
+                </a>
+                <div class="portfolio-carousel-details">
+                    <h3><a class="tag" href="/tags/<%= tag %>"><%= tag %></a></h3>
+                    <span>点击可以链接到<%= tag %>的文章</span>
+                </div>
+            </li>
+            <%  }) %>
+        </ul>
+    </section>
+
+    <div class="clear"></div>
+</div><!--end centered-wrapper-->
+
+<% include footer %>

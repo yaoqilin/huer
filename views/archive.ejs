@@ -1,0 +1,75 @@
+<% include header %>
+<div class="centered-wrapper">
+    <!--<div class="separator"></div>-->
+    <section>
+    <div class="bgtitle"><h2>文章</h2></div>
+    <ul id="homeblog-carousel">
+    <li>
+    <a href="">
+    <span class="item-on-hover"></span>
+    <img src="images/blog/homeblog-thumbnail3.jpg" alt="" />
+    </a>
+    <div class="blog-carousel-details">
+    <h2><a href="">最美好的记忆留给最纯真的你</a></h2>
+    <div class="carousel-meta">
+    <span class="post-format"><i class="icon-pencil"></i></span><span class="details">May 18, 2012 / <a href="#">3 Comments</a></span>
+    </div>
+    <p>翻开15年的记忆，徜徉在最美好的时光里</p>
+    </div>
+    </li>
+
+    <li>
+    <a href="portfolio-single.html">
+    <span class="item-on-hover"></span>
+    <img src="images/blog/homeblog-thumbnail5.jpg" alt="LOREM IPSUM DOLOR SIT AMET" />
+    </a>
+    <div class="blog-carousel-details">
+    <h2><a href="">最美好的记忆留给最纯真的你</a></h2>
+    <div class="carousel-meta">
+    <span class="post-format"><i class="icon-pencil"></i></span><span class="details">December 07, 2012 / <a href="#">4 Comments</a></span>
+    </div>
+    <p>翻开15年的记忆，徜徉在最美好的时光里</p>
+    </div>
+    </li>
+    <li>
+    <a href="">
+    <span class="item-on-hover"></span>
+    <img src="images/blog/homeblog-thumbnail1.jpg" alt="" />
+    </a>
+    <div class="blog-carousel-details">
+    <h2><a href="">最美好的记忆留给最纯真的你</a></h2>
+    <div class="carousel-meta">
+    <span class="post-format"><i class="icon-facetime-video"></i></span><span class="details">May 18, 2012 / <a href="#">3 Comments</a></span>
+    </div>
+    <p>翻开15年的记忆，徜徉在最美好的时光里</p>
+    </div>
+    </li>
+
+    <li>
+    <a href="">
+    <span class="item-on-hover"></span>
+    <img src="images/blog/homeblog-thumbnail4.jpg" alt="" />
+    </a>
+    <div class="blog-carousel-details">
+    <h2><a href="">最美好的记忆留给最纯真的你</a></h2>
+    <div class="carousel-meta">
+    <span class="post-format"><i class="icon-quote-left"></i></span><span class="details">December 07, 2012 / <a href="#">4 Comments</a></span>
+    </div>
+    <p>翻开15年的记忆，徜徉在最美好的时光里</p>
+    </div>
+    </li>
+    </ul>
+    </section>
+    <% let lastday = 0 %>
+    <% posts.forEach((post,index)=>{ %>
+    <% if(lastday != post.time.day ) {%>
+    <h3><%= post.time.day %></h3>
+    <p class="percent-one-fifth">
+        <% lastday = post.time.day }%>
+        <time><%= post.time.day %></time>
+        <a href="/u/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>"><%= post.title %></a>
+    </p>
+    <% }) %>
+    <div class="clear"></div>
+</div><!--end centered-wrapper-->
+<% include footer %>

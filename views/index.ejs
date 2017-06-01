@@ -1,0 +1,300 @@
+<% include header.ejs %>
+
+
+<div class="top-shadow"></div>
+<div class="fullwidthbanner-container">
+    <div class="fullwidthbanner">
+        <ul>
+            <!-- THE FIRST SLIDE -->
+            <li data-transition="slidedown" data-slotamount="15" data-masterspeed="300">
+                <img src="images/slides/slide5.jpg" alt="" />
+
+                <div class="caption box-slide1 lfl ltl"
+                     data-x="0"
+                     data-y="150"
+                     data-speed="300"
+                     data-start="1000"
+                     data-easing="easeOutExpo"><h2>恰同学少年</h2><p>独立寒秋，湘江北去，橘子洲头。
+                        看万山红遍，层林尽染；漫江碧透，百舸争流。
+                        鹰击长空，鱼翔浅底，万类霜天竞自由。
+                        怅寥廓，问苍茫大地，谁主沉浮？
+                        携来百侣曾游。忆往昔峥嵘岁月稠。
+                        恰同学少年，风华正茂；书生意气，挥斥方遒。
+                        指点江山，激扬文字，粪土当年万户侯。
+                        曾记否，到中流击水，浪遏飞舟？</p></div>
+            </li>
+
+            <!-- THE SECOND SLIDE -->
+            <li data-transition="fade" data-slotamount="15" data-masterspeed="300">
+                <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                <img src="images/slides/slide3.jpg" alt="" />
+
+                <!-- THE CAPTIONS IN THIS SLDIE -->
+                <div class="caption box-slide2 lft ltt"
+                     data-x="770"
+                     data-y="110"
+                     data-speed="300"
+                     data-start="500"
+                     data-easing="easeOutExpo"><h2>Sympathique</h2><p>
+                        Ma chambre a la forme d'une cage,
+                        le soleil passe son bras par la fenêtre.
+                        Les chasseurs à ma porte
+                        comme les petits soldats
+                        qui veulent me prendre.
+                        Je ne veux pas travailler,
+                        je ne veux pas déjeuner,
+                        je veux seulement l'oublier et puis je fume...
+                    </p><a class="button red" href="http://music.baidu.com/artist/88005476?fm=altg_new3&autoplay=true">pink martini</a></div>
+
+            </li>
+
+            <!-- THE THIRD SLIDE -->
+            <li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-link="portfolio-single.html">
+                <img src="images/slides/slide2.jpg" alt="" />
+
+                <!-- THE FIFTH SLIDE -->
+            <li data-transition="slideright" data-slotamount="15" data-masterspeed="300">
+                <img src="images/slides/slide1.jpg" alt="" />
+
+                <div class="caption title_text lfl stl"
+                     data-x="0"
+                     data-y="250"
+                     data-speed="300"
+                     data-start="1000"
+                     data-easing="easeOutExpo">如果我们不曾相遇
+                    我会是在哪里？在做什么?</div>
+
+                <div class="caption description_text lfl stl"
+                     data-x="0"
+                     data-y="292"
+                     data-speed="300"
+                     data-start="1300"
+                     data-easing="easeOutExpo">某一天 某一刻 某次呼吸 我们终将再分离 而我的 自传里 曾经有你 没有遗憾的诗句</div>
+            </li>
+            <!-- THE SIX SLIDE -->
+            <li data-transition="fade" data-slotamount="15" data-masterspeed="300">
+                <img src="images/slides/slide6.jpg" alt="" />
+
+                <div class="caption lfl fadeout"
+                     data-x="0"
+                     data-y="40"
+                     data-speed="300"
+                     data-start="500"
+                     data-easing="easeOutExpo"><img src="images/slides/layer1.jpg" alt=""></div>
+
+                <div class="caption lfl fadeout"
+                     data-x="15"
+                     data-y="260"
+                     data-speed="300"
+                     data-start="800"
+                     data-easing="easeOutExpo"><img src="images/slides/layer2.jpg" alt=""></div>
+                <div class="caption lfr fadeout"
+                     data-x="855"
+                     data-y="60"
+                     data-speed="300"
+                     data-start="1100"
+                     data-easing="easeOutExpo"><img src="images/slides/layer4.jpg" alt=""></div>
+
+                <div class="caption lfr fadeout"
+                     data-x="880"
+                     data-y="290"
+                     data-speed="300"
+                     data-start="1400"
+                     data-easing="easeOutExpo"><img src="images/slides/layer5.jpg" alt=""></div>
+            </li>
+        </ul>
+        <!--enable slider timer
+            <div class="tp-bannertimer"></div>
+        -->
+    </div>
+    <div class="bottom-shadow"></div>
+</div><!--end slider-->
+
+<div class="centered-wrapper">
+
+    <div class="space"></div>
+    <div class="centered-wrapper">
+        <section id="blog">
+            <div id="posts" class="single-post">
+                <article class="post">
+                    <div class="post-thumbnail">
+                        <img src="images/blog/inner-blog-image1.jpg" alt="" />
+                    </div><!--end post-thumbnail-->
+                    <div class="post-content">
+
+                        <div class="double-separator"></div>
+
+                        <h3>文章发布</h3>
+                        <% posts.forEach( (post, index)=> { %>
+                        <ol class="commentlist">
+                            <li class="comment">
+                                <div class="commentwrap">
+                                    <p><h2><a href="/u/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>"><%= post.title %></a></h2></p>
+                                    <div class="avatar">
+                                        <img src="images/blog/avatar.jpg" width="60" height="60" alt="" />
+                                    </div><!--end avatar-->
+
+                                    <div class="metacomment">
+                                        作者：<a href="/u/<%= post.name %>"><%= post.name %></a> |
+                                        日期：<%= post.time.minute %> |
+                                        标签：
+                                        <% post.tags.forEach( (tag, index)=>{ %>
+                                        <% if (tag) { %>
+                                        <a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
+                                        <% } %>
+                                        <% }) %>
+                                    </div><!--end metacomment-->
+
+                                    <div class="bodycomment">
+                                        <p><%- post.post %></p>
+                                        <p class="info">阅读：<%= post.pv %> | 评论：<%= post.comments.length %></p>
+                                    </div><!--end bodycomment-->
+                                </div><!--end comment-wrap-->
+                            </ol>
+                        <% }) %>
+                        <%- include paging %>
+
+                    </div><!--end post-content-->
+                </article>
+
+            </div><!--end posts-->
+        </section>
+
+        <aside id="sidebar">
+            <div class="widget recent-posts">
+                <h3>Recent Posts</h3>
+                <div class="sidebar-post">
+                    <h5><a href="blog-single.html">SEO Tips and Tricks for Local Businesses</a></h5>
+                    <span>23 July 2012 / <a href="#">5 Comments</a></span>
+                </div><!--end sidebar-post-->
+                <div class="sidebar-post">
+                    <h5><a href="blog-single.html">From Inception to IPO: Facebook in 8 Years</a></h5>
+                    <span>06 May 2012 / <a href="#">3 Comments</a></span>
+                </div><!--end sidebar-post-->
+                <div class="sidebar-post">
+                    <h5><a href="blog-single.html">A/B Testing: What is It?</a></h5>
+                    <span>12 March 2012 / <a href="#">No Comments</a></span>
+                </div><!--end sidebar-post-->
+            </div>
+
+            <div class="widget categories ">
+                <h3>存档</h3>
+                <ul>
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Small Business</a></li>
+                    <li><a href="#">Web Applications</a></li>
+                </ul>
+            </div><!--end widget-->
+
+            <div class="widget tags ">
+                <h3>标签</h3>
+                <ul>
+                    <li><a href="#">Html5</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Node.js</a></li>
+                    <li><a href="#">Angular.js</a></li>
+                    <li><a href="#">mongoose</a></li>
+                    <li><a href="#">Vue</a></li>
+                    <li><a href="#">react</a></li>
+                </ul>
+            </div><!--end widget-->
+
+            <div class="widget flickr-widget">
+                <h3>VIP</h3>
+                <div id="flickr">
+                    <ul>
+                        <li class="one_half first"><a href="#"><img src="/img/11.gif" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="/img/12.jpg" alt=""></a></li>
+                        <li class="one_half first"><a href="#"><img src="/img/13.gif" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="/img/14.jpg" alt=""></a></li>
+                        <li class="one_half first"><a href="#"><img src="/img/1.jpg" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="/img/2.jpg" alt=""></a></li>
+                        <li class="one_half first"><a href="#"><img src="/img/3.jpg" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="/img/4.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <div class="clear"></div>
+    </div><!--end centered-wrapper-->
+    <hr>
+    <div class="centered-wrapper">
+        <section>
+            <div class="bgtitle"><h2>标签</h2></div>
+            <ul id="portfolio-carousel">
+                <li>
+                    <a href="images/portfolio/image1.jpg" rel="prettyPhoto[pp_gal]" title="Cervejaria Republica">
+                        <span class="item-on-hover"><span class="hover-image"></span></span>
+                        <img src="images/portfolio/image1-small.jpg" alt=" " />
+                    </a>
+                    <div class="portfolio-carousel-details">
+                        <h3><a href="">HTML5</a></h3>
+                        <span>关于HTML5的帖子</span>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="images/portfolio/image2.jpg" rel="prettyPhoto[pp_gal]" title="Website Redesign">
+                        <span class="item-on-hover"><span class="hover-link"></span></span>
+                        <img src="images/portfolio/image2-small.jpg" alt=" " />
+                    </a>
+                    <div class="portfolio-carousel-details">
+                        <h3><a href="">CSS</a></h3>
+                        <span>关于CSS的帖子</span>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="" rel="prettyPhoto">
+                        <span class="item-on-hover"><span class="hover-video"></span></span>
+                        <img src="images/portfolio/image3-small.jpg" alt=" " />
+                    </a>
+                    <div class="portfolio-carousel-details">
+                        <h3><a href="">javascript</a></h3>
+                        <span>关于javascript的帖子</span>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="images/portfolio/image6.jpg">
+                        <span class="item-on-hover"><span class="hover-image"></span></span>
+                        <img src="images/portfolio/image6-small.jpg" alt=" " />
+                    </a>
+                    <div class="portfolio-carousel-details">
+                        <h3><a href="">Node.js</a></h3>
+                        <span>关于Node.js的帖子</span>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="images/portfolio/image4.jpg" rel="prettyPhoto[pp_gal]" title="Warner Bros">
+                        <span class="item-on-hover"><span class="hover-image"></span></span>
+                        <img src="images/portfolio/image4-small.jpg" alt=" " />
+                    </a>
+                    <div class="portfolio-carousel-details">
+                        <h3><a href="">Angular.js</a></h3>
+                        <span>关于Angular.js的帖子</span>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="item-on-hover"><span class="hover-link"></span></span>
+                        <img src="images/portfolio/image6-small.jpg" alt=" " />
+                    </a>
+                    <div class="portfolio-carousel-details">
+                        <h3><a href="">Vue</a></h3>
+                        <span>关于Vue的帖子</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div><!--end centered-wrapper-->
+</div><!--end centered-wrapper-->
+<% include footer.ejs %>
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- mobile meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>EMB</title>
+
+    <!-- main style -->
+    <link rel="stylesheet" type="text/css" href="../../../style.css" media="screen" />
+
+    <!-- color scheme -->
+    <link rel="stylesheet" type="text/css" href="../../../color-schemes/red/red.css" media="screen" title="red" />
+    <link rel="stylesheet" type="text/css" href="../../../color-schemes/yellow/yellow.css" media="screen" title="yellow" />
+    <link rel="stylesheet" type="text/css" href="../../../color-schemes/orange/orange.css" media="screen" title="orange" />
+    <link rel="stylesheet" type="text/css" href="../../../color-schemes/blue/blue.css" media="screen" title="blue" />
+    <link rel="stylesheet" type="text/css" href="../../../color-schemes/green/green.css" media="screen" title="green" />
+    <link rel="stylesheet" type="text/css" href="../../../color-schemes/purple/purple.css" media="screen" title="purple" />
+
+    <!--miscellaneous-->
+    <link rel="stylesheet" type="text/css" href="../../../css/superfish.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../../css/prettyPhoto.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/audioplayer.css" media="screen" />
+
+    <!-- revolution slider settings -->
+    <link rel="stylesheet" type="text/css" href="../../../rs-plugin/css/settings.css" media="screen" />
+
+    <!-- setting mobile environment -->
+    <link rel="stylesheet" type="text/css" href="../../../css/responsive.css" media="screen" />
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <!--<script src="../../../html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
+    <!--[endif]&ndash-->
+
+    <script type="text/javascript" src="../../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../js/hoverIntent.js"></script>
+    <script type="text/javascript" src="../../../js/superfish.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.tweet.js"></script>
+    <script type="text/javascript" src="../../../js/jflickrfeed.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../../../js/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.mobilemenu.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.contact.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.preloadify.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.isotope.min.js"></script>
+
+    <!-- jQuery Revolution Slider -->
+    <script type="text/javascript" src="../../../rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="../../../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script type="text/javascript" src="../../../js/custom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../template-changer.css" media="screen"/>
+    <script type="text/javascript" src="../../../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../js/styleswitch.js"></script>
+
+    <!-- Google Web Fonts -->
+    <!--<link href='../../../fonts.googleapis.com/css@family=Open+Sans_3A300,400,600,700' rel='stylesheet' type='text/css'>-->
+
+
+    <script type="text/javascript">
+        $(()=>
+            {
+                // Call stylesheet init so that all stylesheet changing functions
+                // will work.
+                $.stylesheetInit();
+
+                // This code loops through the stylesheets when you click the link with
+                // an ID of "toggler" below.
+                $('#toggler').bind(
+                    'click',
+                    (e)=>
+                    {
+                        $.stylesheetToggle();
+                        return false;
+                    }
+                );
+
+                // When one of the styleswitch links is clicked then switch the stylesheet to
+                // the one matching the value of that links rel attribute.
+                $('.styleswitch').bind(
+                    'click',
+                    (e)=>
+                    {
+                        $.stylesheetSwitch(this.getAttribute('rel'));
+                        return false;
+                    }
+                );
+            }
+        );
+    </script>
+
+</head>
+
+<!--very important: setting a class for homepage -->
+<body class="home">
+
+<!-- setting a fullscreen image as background:
+<img id="bg" src="images/apple.jpg" alt="apple-background" />
+-->
+
+
+<div class="theme-changer-wrap">
+    <div class="theme-changer">
+        <div class="changer-inner">
+            <span> 更换主题颜色 </span>
+            <ul id="colors">
+                <li><a href="index.html@style=yellow" rel="yellow" class="styleswitch color-yellow">黄色</a></li>
+                <li><a href="index.html@style=orange" rel="orange" class="styleswitch color-orange">橘色</a></li>
+                <li><a href="index.html@style=blue" rel="blue" class="styleswitch color-blue">蓝色</a></li>
+                <li><a href="index.html@style=green" rel="green" class="styleswitch color-green">绿色</a></li>
+                <li><a href="index.html@style=red" rel="red" class="styleswitch color-red">红色</a></li>
+                <li><a href="index.html@style=purple" rel="purple" class="styleswitch color-purple">紫色</a></li>
+
+            </ul>
+            <div style="clear:both; height:10px; width:100%"></div>
+        </div>
+    </div>
+    <div class="open-close"></div>
+</div>
+
+<div id="wrapper">
+    <header id="header">
+        <div class="centered-wrapper">
+            <div class="one-third">
+                <div class="logo"><a href="#"></a></div>
+            </div><!--end one-third-->
+
+            <div class="two-third column-last">
+                <nav id="navigation">
+                    <ul id="mainnav">
+                        <li><a href="/"><span>首页</span></a>
+                        </li>
+
+                        <li><a href="/archive"><span>存档</span></a>
+                        </li>
+                        <li><a href="/tags"><span>标签</span></a>
+                        </li>
+                        <% if(user){%>
+                        <li><a href="/post"><span>发布</span></a>
+                        </li>
+                        <li><a href="/upload">上传</a></li>
+                        <li><a href="#"><span>设置</span></a>
+                            <ul>
+                                <li><a href="">设置个人资料</a></li>
+                                <li><a href="">上传头像</a></li>
+                                <li><a href="/logout">退出</a></li>
+                            </ul>
+                        </li>
+                        <%}else {%>
+                        <li><a href="/login"><span>登录</span></a>
+                        </li>
+                        <li><a href="/reg"><span>注册</span></a>
+                        </li>
+                        <%}%>
+                    </ul>
+                </nav><!--end navigation-->
+            </div><!--end two-third-->
+            <div class="clear"></div>
+        </div><!--end centered-wrapper-->
+    </header>
+    <div class="top-shadow"></div>
+    <div>
+        <% if (success) { %>
+            <div><%= success %></div>
+            <% } %>
+            <% if (error) { %>
+            <div><%= error %></div>
+            <% } %>
+    </div>

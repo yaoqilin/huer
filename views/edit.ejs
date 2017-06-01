@@ -1,0 +1,42 @@
+<% include header %>
+<div class="centered-wrapper">
+    <img src="img/post_bg.jpg" alt="" width="100%">
+    <div class="one-fourth">
+        <aside>
+            <h6>CNode:</h6>
+            <p>坦诚的力量是无穷的<br />
+                <a href="https://cnodejs.org/topic/58eee565a92d341e48cfe7fc">精品美文</a><br />
+            </p>
+
+            <!--<div class="contact-info">-->
+            <!--<h6>CONTACT INFO:</h6>-->
+            <!--<p><span>Phone:</span> + (0) 000-1234-5678</p>-->
+            <!--<p><span>Fax:</span> + (0) 000-1234-5678</p>-->
+            <!--<p><span>Email:</span> <a href="mailto:youremail@yoursite.com">yourmail@yoursite.com</a> </p>-->
+            <!--</div>-->
+        </aside><!--end aside-->
+    </div><!--end one-fourth-->
+
+    <div class="three-fourth column-last">
+        <h6>编辑文章</h6>
+        <div id="contactform">
+            <div id=""></div>
+            <form method="post" action="/edit/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>">
+                <label>标题<span>*</span></label>
+                <input type="text" name="title" value="<%= post.title %>" disabled="disabled"/>
+                <fieldset class="clear">
+                    <label>正文 <span>*</span></label>
+                    <textarea name="post" id=""><%= post.post %></textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="submit" name="" value="确认"
+                           id="" class="button red"/>
+                </fieldset>
+            </form>
+        </div><!--end contactform-->
+    </div><!--three-fourth-->
+
+    <div class="clear"></div>
+</div><!--end centered-wrapper-->
+<div class="space"></div>
+<% include footer %>
